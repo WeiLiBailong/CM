@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2021-03-19T20:06:58Z" product-name="ods_osm">
+		<header/>
+		<body>
+			<trans-unit id="pi1_title" xml:space="preserve" approved="yes">
+				<source>OpenStreetMap</source>
+				<target>OpenStreetMap</target>
+			</trans-unit>
+			<trans-unit id="pi1_plus_wiz_description" xml:space="preserve" approved="yes">
+				<source>Add an interactive map to your website.</source>
+				<target>Interaktive Karte zur Website hinzufügen.</target>
+			</trans-unit>
+			<trans-unit id="wiz_geocode" xml:space="preserve" approved="yes">
+				<source>Geocode addresses</source>
+				<target>Adressen geokodieren</target>
+			</trans-unit>
+			<trans-unit id="openlayers.showLayerList" xml:space="preserve">
+				<source>Show layer list</source>
+				<target>Liste der Kartenebenen</target>
+			</trans-unit>
+			<trans-unit id="openlayers.hideLayerList" xml:space="preserve">
+				<source>Hide layer list</source>
+				<target>Liste der Kartenebenen ausblenden</target>
+			</trans-unit>
+			<trans-unit id="openlayers.clusterLayer" xml:space="preserve">
+				<source>Cluster Layer</source>
+				<target>Cluster Ebene</target>
+			</trans-unit>
+			<trans-unit id="base_layer" xml:space="preserve">
+				<source>Base Layer</source>
+				<target>Grundkarte</target>
+			</trans-unit>
+			<trans-unit id="overlays" xml:space="preserve">
+				<source>Overlays</source>
+				<target>Überlagerungskarten</target>
+			</trans-unit>
+			<trans-unit id="file" xml:space="preserve">
+				<source>File</source>
+				<target>Datei</target>
+			</trans-unit>
+			<trans-unit id="mouse_position" xml:space="preserve">
+				<source>Mouse position</source>
+				<target>Mausposition</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

@@ -1,0 +1,218 @@
+{
+    "version": "8.1.0",
+    "restructuringDone": false,
+    "tables": {
+        "tt_content": {
+            "elements": {
+                "studiengang_info": {
+                    "color": "#000000",
+                    "colorOverlay": "#000000",
+                    "columns": [
+                        "tx_mask_studiengang_titel",
+                        "tx_mask_studiengang_abschluss",
+                        "tx_mask_studiengang_zulassung",
+                        "tx_mask_studiengang_studienbeginn",
+                        "tx_mask_studiengang_semester",
+                        "tx_mask_studiengang_kontakt",
+                        "tx_mask_studiengang_beschreibung"
+                    ],
+                    "description": "",
+                    "descriptions": [
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "icon": "",
+                    "iconOverlay": "",
+                    "key": "studiengang_info",
+                    "label": "Studiengang Info",
+                    "labels": [
+                        "Titel",
+                        "Abschluss",
+                        "Freie Zulassung",
+                        "Studienbeginn",
+                        "Regelsemester",
+                        "Kontakt",
+                        "Kurzbeschreibung"
+                    ],
+                    "shortLabel": "",
+                    "sorting": 1
+                }
+            },
+            "sql": {
+                "tx_mask_studiengang_abschluss": {
+                    "tt_content": {
+                        "tx_mask_studiengang_abschluss": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_studiengang_beschreibung": {
+                    "tt_content": {
+                        "tx_mask_studiengang_beschreibung": "mediumtext"
+                    }
+                },
+                "tx_mask_studiengang_kontakt": {
+                    "tt_content": {
+                        "tx_mask_studiengang_kontakt": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_studiengang_semester": {
+                    "tt_content": {
+                        "tx_mask_studiengang_semester": "int(11) DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_studiengang_studienbeginn": {
+                    "tt_content": {
+                        "tx_mask_studiengang_studienbeginn": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_studiengang_titel": {
+                    "tt_content": {
+                        "tx_mask_studiengang_titel": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_studiengang_zulassung": {
+                    "tt_content": {
+                        "tx_mask_studiengang_zulassung": "int(11) DEFAULT '0' NOT NULL"
+                    }
+                }
+            },
+            "tca": {
+                "tx_mask_studiengang_abschluss": {
+                    "config": {
+                        "fieldWizard": {
+                            "selectIcons": {
+                                "disabled": 1
+                            }
+                        },
+                        "items": [
+                            {
+                                "description": "",
+                                "group": "",
+                                "icon": "",
+                                "label": "B.A.",
+                                "value": "Bachelor of Arts"
+                            },
+                            {
+                                "description": "",
+                                "group": "",
+                                "icon": "",
+                                "label": "M.A.",
+                                "value": "Master of Arts"
+                            },
+                            {
+                                "description": "",
+                                "group": "",
+                                "icon": "",
+                                "label": "B.Sc.",
+                                "value": "Bachelor of Science"
+                            },
+                            {
+                                "description": "",
+                                "group": "",
+                                "icon": "",
+                                "label": "M.Sc.",
+                                "value": "Master of Science"
+                            }
+                        ],
+                        "maxitems": "1",
+                        "minitems": "1",
+                        "renderType": "selectSingle",
+                        "type": "select"
+                    },
+                    "fullKey": "tx_mask_studiengang_abschluss",
+                    "key": "studiengang_abschluss",
+                    "type": "select"
+                },
+                "tx_mask_studiengang_beschreibung": {
+                    "config": {
+                        "enableRichtext": 1,
+                        "required": 1,
+                        "type": "text"
+                    },
+                    "fullKey": "tx_mask_studiengang_beschreibung",
+                    "key": "studiengang_beschreibung",
+                    "type": "richtext"
+                },
+                "tx_mask_studiengang_kontakt": {
+                    "config": {
+                        "nullable": 0,
+                        "type": "email"
+                    },
+                    "fullKey": "tx_mask_studiengang_kontakt",
+                    "key": "studiengang_kontakt",
+                    "type": "email"
+                },
+                "tx_mask_studiengang_semester": {
+                    "config": {
+                        "nullable": 0,
+                        "range": {
+                            "lower": "0",
+                            "upper": "12"
+                        },
+                        "required": 1,
+                        "type": "number"
+                    },
+                    "fullKey": "tx_mask_studiengang_semester",
+                    "key": "studiengang_semester",
+                    "type": "integer"
+                },
+                "tx_mask_studiengang_studienbeginn": {
+                    "config": {
+                        "fieldWizard": {
+                            "selectIcons": {
+                                "disabled": 1
+                            }
+                        },
+                        "items": [
+                            {
+                                "description": "",
+                                "group": "",
+                                "icon": "",
+                                "label": "WiSe",
+                                "value": "Wintersemester"
+                            },
+                            {
+                                "description": "",
+                                "group": "",
+                                "icon": "",
+                                "label": "SoSe",
+                                "value": "Sommersemester"
+                            }
+                        ],
+                        "maxitems": "2",
+                        "minitems": "1",
+                        "renderType": "selectSingleBox",
+                        "type": "select"
+                    },
+                    "fullKey": "tx_mask_studiengang_studienbeginn",
+                    "key": "studiengang_studienbeginn",
+                    "type": "select"
+                },
+                "tx_mask_studiengang_titel": {
+                    "config": {
+                        "eval": "alpha",
+                        "nullable": 0,
+                        "required": 1,
+                        "type": "input"
+                    },
+                    "fullKey": "tx_mask_studiengang_titel",
+                    "key": "studiengang_titel",
+                    "type": "string"
+                },
+                "tx_mask_studiengang_zulassung": {
+                    "config": {
+                        "items": [],
+                        "type": "check"
+                    },
+                    "fullKey": "tx_mask_studiengang_zulassung",
+                    "key": "studiengang_zulassung",
+                    "type": "check"
+                }
+            }
+        }
+    }
+}

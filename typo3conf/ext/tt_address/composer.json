@@ -1,0 +1,70 @@
+{
+	"name": "friendsoftypo3/tt-address",
+	"type": "typo3-cms-extension",
+	"description": "Displays a list of addresses from an address table on the page.",
+	"keywords": [
+		"TYPO3",
+		"extension",
+		"addresses"
+	],
+	"homepage": "https://extensions.typo3.org/extension/tt_address",
+	"support": {
+		"docs": "https://docs.typo3.org/p/friendsoftypo3/tt-address/main/en-us/",
+		"issues": "https://github.com/FriendsOfTYPO3/tt_address/issues",
+		"source": "https://github.com/FriendsOfTYPO3/tt_address"
+	},
+	"authors": [
+		{
+			"name": "tt_address Development Team",
+			"role": "Developer"
+		}
+	],
+	"license": "GPL-2.0-or-later",
+	"require": {
+		"typo3/cms-core": "^11.5 || ^12.4",
+		"php": ">=7.4",
+		"symfony/console": "^5.4 || ^6.0 || ^7.0"
+	},
+	"extra": {
+		"typo3/cms": {
+			"extension-key": "tt_address",
+			"app-dir": ".Build",
+			"web-dir": ".Build/public"
+		}
+	},
+	"autoload": {
+		"psr-4": {
+			"FriendsOfTYPO3\\TtAddress\\": "Classes"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"FriendsOfTYPO3\\TtAddress\\Tests\\": "Tests"
+		}
+	},
+	"replace": {
+		"typo3-ter/tt-address": "self.version"
+	},
+	"require-dev": {
+		"typo3/cms-install": "^11.5 || ^12",
+		"sbuerk/typo3-cmscomposerinstallers-testingframework-bridge": "^0.0.1",
+		"typo3/cms-extensionmanager": "^11.5 || ^12",
+		"phpunit/phpunit": "^9.6.15",
+		"php-coveralls/php-coveralls": "^2.1",
+		"phpspec/prophecy-phpunit": "^2.0"
+	},
+	"config": {
+		"vendor-dir": ".Build/vendor",
+		"bin-dir": ".Build/bin",
+		"allow-plugins": {
+			"sbuerk/typo3-cmscomposerinstallers-testingframework-bridge": true,
+			"typo3/class-alias-loader": true,
+			"typo3/cms-composer-installers": true
+		}
+	},
+	"scripts": {
+		"post-autoload-dump": [
+			"TYPO3\\TestingFramework\\Composer\\ExtensionTestEnvironment::prepare"
+		]
+	}
+}
